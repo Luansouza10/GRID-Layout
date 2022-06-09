@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        * {
+            padding:0;
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            color: aliceblue;
+        }
+
+        •pagina {
+          display: grid;
+          grid-template-areas: "h""m""c""ca";
+          row-gap:1px;
+        }
+
+        •cabecalho {
+          grid-area: h;
+          background-color:rgb(12, 114, 215);
+          display: flex;
+        }
+
+        •titulo {
+          padding:10px;
+          text-shadow: 1px 1px 3px Oblack;
+        }
+
+        • Logo {
+          width: 72px;
+         } 
+
+         •menuPrincipal {
+          grid-area:m;
+          background: color #f90;
+        }
+
+        •itensMenu l1 {
+          list-style: none;
+        }
+
+        •itensMenu li a {
+          color: white;
+          text-decoration:none;
+        }
+        
+        •conteudo {
+          background-color:lightgrey;
+          color:black;
+          grid-area: c;
+        }
+
+        • conteudo_extra {
+          background-color:grey;
+          grid-area: r;
+        }
+
+        • rodape {
+          background-color:green;
+          grid-area: r;
+        }
+        @media  and (min-width:480px) {
+          -pagina{
+            grid-template-areas:"h h"
+                                "m m"
+                                "c ca";         
+          }
+          
+        }
+      
+          </style>
+</head>      
+<body>
+    <main class="pagina">
+        
+        <header class="cabecalho">
+            <img class="logo"
+              src="........................."
+              alt="logo"/>
+            <h1 class="titulo">Título da página</h1>
+        </header>
+        <nav class="menuPrincipal">
+            <ul class="itensMenu">
+                <li><a href="">opção1</a></li>
+                <li><a href="">opção2</a></li>
+                <li><a href="">opção3</a></li>
+                <li><a href="">opção4</a></li>
+            </ul>
+        </nav>
+        <article class="conteudo">--
+        </article>
+        <aside class="conteudo_extra">--
+        </aside>
+        <footer class="rodape">-
+        </footer>
+    </main>
+</body>
+</html>
